@@ -1,0 +1,48 @@
+#include<stdio.h>
+#icnlude<stdlib.h>
+preenche(struct Fruta *f, int q){
+	int i;
+	for(i=0;i<q;i++){
+		printf("Digite o nome da fruta");
+		scanf("%[^\n]s", f[i]->nome);
+		printf("Digite a cor da fruta");
+		scanf("%[^\n]s, f[i].cor");
+		printf("Digite o sabor da fruta");
+		scanf("%[^\n]s", f[i].sabor);
+		printf("Digite q quantidade da fruta");
+		scanf("%d", f[i].quantidade);
+		
+	}
+	
+}
+imprime(struct Fruta *f, int q){
+		for(i=0;i<q;i++){
+	printf("Nome: %s\n Cor: %s\n Sabor: %s Quantidade de frutas:%d\n ", f[i].nome, f[i].cor, f[i].sabor, f[i].quantidade);
+	
+}}
+buscar(struct *f, int q){
+	int i;
+	char nome2[25];
+	printf("Digite o nome da pessoa que deseja alterar a idade ");
+    scanf("%[^\n]s", nome2);
+	for(i=0;i<q;i++){
+if (strcmp(nome2,f[i].nome==0){ //se os dois nomes forem iguais fica igual a 0
+printf("As informacoes da fruta a seguir: %s %s %s %d\n", f[i].nome, f[i].cor, f[i].sabor, f[i].quantidade);
+
+}
+int main(){
+	int q;
+	printf("Quantas frutas voce quer cadastrar?");
+	scanf("%d", &q);
+	typedef struct fruta{
+		char nome[25];
+		char cor[25];
+		char sabor[25];
+		int quantidade;
+		
+	}  Fruta;
+	struct Fruta *f= (Fruta*)malloc(q*sizeof(Fruta))
+	if (f==NULL)
+	exit(1)
+	
+	}
