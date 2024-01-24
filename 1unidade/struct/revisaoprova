@@ -44,5 +44,8 @@ int main(){
 	struct Fruta *f= (Fruta*)malloc(q*sizeof(Fruta))
 	if (f==NULL)
 	exit(1)
-	
+	preenche(f,q);
+	imprime(f,q);
+	buscar(f,q);
+	free(f);
 	}

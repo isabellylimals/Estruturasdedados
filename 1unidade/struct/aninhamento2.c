@@ -10,7 +10,7 @@ typedef struct aluno{
     char nome[25];
     int idade;
     int matricula;
-    //vetor de discplinas 
+    //vetor de disciplinas 
     Disciplina *materias; //declarando estaticamente
     //aninhamento de estruturas discplina na estrutura aluno
 }Aluno;

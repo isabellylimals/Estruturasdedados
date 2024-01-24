@@ -32,7 +32,7 @@ void imprime(struct Pessoa *p, int q) {
 
 void alterari(struct Pessoa *p, int q) {
     int i;
-    char nome2[20]
+    char nome2[20];
     int novaidade;
     printf("Digite o nome da pessoa que deseja alterar a idade ");
     scanf("%[^\n]s", nome2);

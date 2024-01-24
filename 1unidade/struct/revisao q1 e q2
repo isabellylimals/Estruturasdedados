@@ -1,0 +1,3 @@
+//Questao 1: A diferença entre v[2] e v+2 diz respeito a que v[2] refere-se a posição de um determinado elemento
+//nesse caso seria o a poisção seria 3, porque começa do 0 e v+2 refere a adicionar um valor, nesse caso o valor 2 a cada elemento  
+ //Questão 2: Quando você usa a expressão v+3, você está acessa o endereço de memória que está 3 após o endereço de v[0] e como cada int ocupa 4 bytes, fica 3*4=12, então o valor da expressão v+3 fica 55012
