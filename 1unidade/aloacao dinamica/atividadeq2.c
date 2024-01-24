@@ -4,7 +4,7 @@
 
 int main() {
     int tam, i, contf = 0, contm = 0;
-    float pf, pm;
+    float pessoasf, pessoasm;
 
     printf("Quantas pessoas foram entrevistadas? ");
     scanf("%d", &tam);
@@ -34,8 +34,8 @@ int main() {
         }
     }
 
-    pf = (contf * 100.0) / tam;
-    pm = (contm * 100.0) / tam;
+    pessoasf = (contf * 100.0) / tam;
+    ppessoasm = (contm * 100.0) / tam;
 
     printf("A porcentagem de mulheres que gostaram foi: %.2f%%\n", pf);
     printf("A porcentagem de homens que nao gostaram foi: %.2f%%\n", pm);

@@ -1,4 +1,7 @@
 
+#include<stdio.h>
+#include<stdlib.h>
+
 void altera_preco(Ingresso *i, int n) {
     int escolha_ingresso;
     printf("\nDigite o número do ingresso que deseja alterar: ");
