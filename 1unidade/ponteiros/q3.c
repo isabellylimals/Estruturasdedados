@@ -15,4 +15,4 @@ int main(void) {
  printf("%d\t%d\t%d\t%d\n", a, b, c, d);
  return 0;
 }
-//saida: os valores: 11,20,10 e 30
+//saida: os valores serão: 11,20,10 e 30

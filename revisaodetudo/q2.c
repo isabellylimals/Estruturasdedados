@@ -9,29 +9,27 @@ typedef struct aluno {
 } Aluno;
 
 void matricula(int n, Aluno** alunos) {
-    int i, j;
-
+	int i,j;
     for (i = 0; i < n; i++) {
-        printf("Matrícula do aluno %d:\n ", i + 1);
+        printf("Matrícula do aluno %d:\n", i + 1);
         scanf("%d", &alunos[i]->matricula);
 
-        printf("Nome do aluno %d:\n ", i + 1);
+        printf("Nome do aluno %d:\n", i + 1);
         scanf(" %[^\n]", alunos[i]->nome);
 
-        printf("Turma do aluno %d:\n ", i + 1);
+        printf("Turma do aluno %d (A, B ou C):\n", i + 1);
         scanf(" %c", &alunos[i]->turma);
 
         for (j = 0; j < 3; j++) {
-            printf("Digite a nota %d\n do aluno %d:\n ", j + 1, i + 1);
+            printf("Digite a nota %d do aluno %d:\n", j + 1, i + 1);
             scanf("%f", &alunos[i]->nota[j]);
         }
     }
 }
 
 void lanca_notas(int n, Aluno** alunos) {
-    int i, j;
-
-    for (i = 0; i < n; i++) {
+	int i,j;
+    for ( i = 0; i < n; i++) {
         float soma = 0;
 
         for (j = 0; j < 3; j++) {
@@ -43,78 +41,46 @@ void lanca_notas(int n, Aluno** alunos) {
     }
 }
 
-void imprime_tudo(int n, Aluno** alunos) {
-    int i, j;
+void imprime_turma(int n, Aluno** alunos, char turma) {
+    int count = 0;
+    int i;
 
-    for (i = 0; i < n; i++) {
-        printf("\nDados do aluno %d:\n", i + 1);
-        printf("Matrícula: %d\n", alunos[i]->matricula);
-        printf("Nome: %s\n", alunos[i]->nome);
-        printf("Turma: %c\n", alunos[i]->turma);
-        printf("Notas:\n");
-        for (j = 0; j < 3; j++) {
-            printf("Nota %d: %.2f\n", j + 1, alunos[i]->nota[j]);
+    printf("\nAlunos da turma %c:\n", turma);
+
+    for ( i = 0; i < n; i++) {
+        if (alunos[i]->turma == turma) {
+            count++;
+            printf("Matrícula: %d, Nome: %s\n", alunos[i]->matricula, alunos[i]->nome);
+            printf("Notas: %.2f, %.2f, %.2f\n", alunos[i]->nota[0], alunos[i]->nota[1], alunos[i]->nota[2]);
         }
     }
-}
 
-void imprime_turma(int n, Aluno** alunos) {
-    int i, j;
-    char turma;
-    int numero;
-
-    printf("Qual a turma? ");
-    scanf(" %c", &turma);
-
-    printf("Quantos alunos tem nessa turma? ");
-    scanf("%d", &numero);
-
-    for (i = 0; i < numero; i++) {
-        if (alunos[i]->turma == turma) {
-            printf("\nDados do aluno %d da turma %c:\n", i + 1, turma);
-            printf("Matrícula: %d\n", alunos[i]->matricula);
-            printf("Nome: %s\n", alunos[i]->nome);
-
-            printf("Notas:\n");
-            for (j = 0; j < 3; j++) {
-                printf("Nota %d: %.2f\n", j + 1, alunos[i]->nota[j]);
-            }
-        }
+    if (count == 0) {
+        printf("Nenhum aluno encontrado na turma %c.\n", turma);
     }
 }
 
 void imprime_turma_aprovados(int n, Aluno** alunos) {
-    int i, j;
-    char turma;
-    int numero;
+	int i,j;
+    for (i = 0; i < n; i++) {
+        float soma = 0;
 
-    printf("Qual a turma? ");
-    scanf(" %c", &turma);
+        for (j = 0; j < 3; j++) {
+            soma += alunos[i]->nota[j];
+        }
 
-    printf("Quantos alunos tem nessa turma? ");
-    scanf("%d", &numero);
+        float media = soma / 3;
 
-    for (i = 0; i < numero; i++) {
-        if (alunos[i]->turma == turma) {
-            float soma = 0;
-
-            for (j = 0; j < 3; j++) {
-                soma += alunos[i]->nota[j];
-            }
-
-            float media = soma / 3;
-
-            if (media >= 7.0) {
-                printf("Aluno %d da turma %c: Aprovado\n", i + 1, turma);
-            } else {
-                printf("Aluno %d da turma %c: Reprovado\n", i + 1, turma);
-            }
+        if (media >= 7.0) {
+            printf("Aluno %d da turma %c: Aprovado\n", i + 1, alunos[i]->turma);
+        } else {
+            printf("Aluno %d da turma %c: Reprovado\n", i + 1, alunos[i]->turma);
         }
     }
 }
 
 int main() {
-    int qtd;
+    int qtd,i;
 
     printf("Quantidade de alunos: ");
     scanf("%d", &qtd);
@@ -124,7 +90,7 @@ int main() {
         exit(1);
     }
 
-    for (int i = 0; i < qtd; i++) {
+    for (i = 0; i < qtd; i++) {
         alunos[i] = (Aluno*)malloc(sizeof(Aluno));
         if (alunos[i] == NULL) {
             exit(1);
@@ -133,13 +99,14 @@ int main() {
 
     matricula(qtd, alunos);
     lanca_notas(qtd, alunos);
-    imprime_tudo(qtd, alunos);
-
-    imprime_turma(qtd, alunos);
+    imprime_turma(qtd, alunos, 'A');
+    imprime_turma(qtd, alunos, 'B');
+    imprime_turma(qtd, alunos, 'C');
     imprime_turma_aprovados(qtd, alunos);
 
     // Liberando a memória alocada
-    for (int i = 0; i < qtd; i++) {
+    for (i = 0; i < qtd; i++) {
+    	int i;
         free(alunos[i]);
     }
     free(alunos);

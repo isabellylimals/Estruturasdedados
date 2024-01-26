@@ -58,9 +58,7 @@ void comparacaoidade(struct Pessoa *p, int q) {
            indicem=i;
           
         }
-    
-   
-        if (p[i].idade< idademenor) {
+            if (p[i].idade< idademenor) {
             idademenor = p[i].idade;
             indicemenor=i;
           

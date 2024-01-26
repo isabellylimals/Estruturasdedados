@@ -30,7 +30,7 @@ int main() {
     for (int i = 0; i < nump; ++i) {
         printf("\nPessoa %d:\n", i + 1);
         printf("Nome: ");
-        scanf("%s", p[i].nome); // Leitura do nome obs: coloquei "." e n "->"pois criei um vetor para ser usado    para mais de uma pessoa e junto com o  [i] substitui a seta;
+        scanf("%s", p[i].nome); 
         printf("Idade: ");
         scanf("%d", &p[i].idade); // Leitura da idade
 

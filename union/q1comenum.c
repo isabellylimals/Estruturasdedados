@@ -25,7 +25,8 @@ void imprimir_dados(Pessoa *pessoa) {
     printf("Nome: %s\nIdade: %d\nGenero: %s\n",
            pessoa->nome,
            pessoa->idade,
-           pessoa->gen == masculino ? "Masculino" : "Feminino");
+           pessoa->gen == masculino ? "Masculino" : "Feminino"); //a interrogação(?) quer dizer "se for igual vai aparecer Masculino e o ":" senao, e ai aparece Feminino"
+        
 }
 
 int main() {
