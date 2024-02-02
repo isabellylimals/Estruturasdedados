@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct tipos {
+typedef struct union {
     char alimento[25];
     char bebidas[25];
     char eletronicos[25];
