@@ -1,10 +1,1 @@
 A media dos valores eh: 10. O maior valor eh: 97. O menor valor eh: -1
-A media dos valores eh: 9. O maior valor eh: 97. O menor valor eh: -1
-A media dos valores eh: 10. O maior valor eh: 97. O menor valor eh: -1
-A media dos valores eh: 9. O maior valor eh: 97. O menor valor eh: -1
-A media dos valores eh: 10. O maior valor eh: 97. O menor valor eh: -1
-A media dos valores eh: 10. O maior valor eh: 97. O menor valor eh: -1
-A media dos valores eh: 10. O maior valor eh: 97. O menor valor eh: -1
-A media dos valores eh: 10. O maior valor eh: 97. O menor valor eh: -1
-A media dos valores eh: 10. O maior valor eh: 97. O menor valor eh: -1
-A media dos valores eh: 11. O maior valor eh: 97. O menor valor eh: -1
