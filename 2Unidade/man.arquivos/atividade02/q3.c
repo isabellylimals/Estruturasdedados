@@ -26,10 +26,11 @@ int main() {
         scanf("%s", frutas.nome);
 
         if (strcmp(frutas.nome, "sair") == 0) {
-            break;
-        }
-
-        printf("Digite o preço da fruta %d:\n", i);
+            break;  // Verifica se o nome da fruta é igual a "sair" usando a função strcmp (string compare).
+                   // strcmp retorna 0 se as strings forem iguais.
+                // Se o nome da fruta for "sair", o bloco dentro do if é executado, então O 'break' é utilizado para sair imediatamente do loop.
+ }
+        printf("Digite o preco da fruta %d:\n", i);
         scanf("%f", &frutas.preco);
 
         fprintf(saida, "%s, %.2f\n", frutas.nome, frutas.preco);
