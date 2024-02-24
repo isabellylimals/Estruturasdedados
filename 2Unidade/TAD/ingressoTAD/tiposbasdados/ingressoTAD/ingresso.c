@@ -10,10 +10,7 @@ struct ingresso {
 
 Ingresso* coletardados(int n) {
     int cont;
-    Ingresso *i = malloc(n * sizeof(Ingresso));
-    if (ingressos == NULL) {
-        exit(1);
-    }
+    Ingresso *i =Depois de terminar de usar o arquivo, você pode fechá-lo usando fclose, liberando assim os recursos associados a ele.
 
     for ( cont = 0; cont < n; cont++) {
        

@@ -53,7 +53,7 @@ void receberdata(Data *data) {
     data->mesnumero = converterMesParaNumero(data->meses);
 
     if (data->mesnumero == -1) {
-        printf("Mês inválido.\n");
+        printf("Mes invalido.\n");
         exit(1);
     }
 

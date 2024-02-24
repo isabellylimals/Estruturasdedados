@@ -1,6 +1,23 @@
-
 #include<stdio.h>
 #include<stdlib.h>
+
+typedef struct ingresso{
+    float preco;
+    char local[80];
+    char atracao[50];
+}Ingresso;
+
+void coletardados(Ingresso* ingressos, int n){
+    int cont;
+    for(cont = 0; cont < n; cont++) {
+        printf("Qual o preco do ingresso?\n");
+        scanf("%f", &ingressos[cont].preco);
+        printf("Digite o local:\n");
+        scanf("%s", ingressos[cont].local);
+        printf("Digite a atracao:\n");
+        scanf("%s", ingressos[cont].atracao);
+    }
+}
 
 void altera_preco(Ingresso *i, int n) {
     int escolha_ingresso;
@@ -25,9 +42,10 @@ void imprimir(Ingresso *i) {
 }
 
 void imprime_menor_maior_preco(int n, Ingresso *vet) {
-    int index_menor = 0, index_maior = 0; int i;
+    int index_menor = 0, index_maior = 0; 
+    int i;
 
-    for ( i = 1; i < n; i++) {
+    for (i = 1; i < n; i++) {
         if (vet[i].preco < vet[index_menor].preco) {
             index_menor = i;
         }
@@ -44,7 +62,9 @@ void imprime_menor_maior_preco(int n, Ingresso *vet) {
 }
 
 int main() {
-    int n; int j; int i;
+    int n; 
+    int j;
+
     printf("Quantos ingressos deseja cadastrar? ");
     scanf("%d", &n);
 
@@ -53,12 +73,12 @@ int main() {
         exit(1);
     }
 
-    for ( j = 0; j < n; j++) {
+    for (j = 0; j < n; j++) {
         printf("\nIngresso %d:\n", j + 1);
-        preenche(&ingressos[j]);
+        coletardados(ingressos, n);
     }
 
-    for ( j = 0; j < n; j++) {
+    for (j = 0; j < n; j++) {
         printf("\nDados do Ingresso %d:\n", j + 1);
         imprimir(&ingressos[j]);
     }
@@ -71,5 +91,3 @@ int main() {
     free(ingressos);
     return 0;
 }
-
-   
