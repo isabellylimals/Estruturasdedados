@@ -10,7 +10,7 @@ struct ingresso {
 
 Ingresso* coletardados(int n) {
     int cont;
-    Ingresso *i =Depois de terminar de usar o arquivo, você pode fechá-lo usando fclose, liberando assim os recursos associados a ele.
+    Ingresso *i;
 
     for ( cont = 0; cont < n; cont++) {
        
@@ -21,7 +21,7 @@ Ingresso* coletardados(int n) {
         printf("Digite a atracao:\n");
         scanf("%s", i[cont].atracao);
     }
-    return ingressos;
+    return i;
 }
 
 void altera_preco(Ingresso *i, int n) {
