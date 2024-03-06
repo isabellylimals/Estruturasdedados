@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "ingresso.c"
+#include "ingresso.h"
 
 int main() {
     int n; int j;

@@ -1,5 +1,5 @@
 // main.c
-#include "aluno.c"
+#include "aluno.h"
 
 int main(void) {
     Aluno *aluno;
