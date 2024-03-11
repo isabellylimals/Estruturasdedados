@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "ingresso.h"
+#include "ingresso.c"
 
 int main() {
     int n; int j;
@@ -16,7 +16,7 @@ int main() {
         imprimir(&ingressos[j]);
     }
 
-    printf("\nEventos de Ingresso Mais Barato e Mais Caro:\n");
+
     imprime_menor_maior_preco(n, ingressos);
 
     free(ingressos);

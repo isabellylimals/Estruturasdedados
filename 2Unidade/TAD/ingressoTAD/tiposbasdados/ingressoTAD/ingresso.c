@@ -26,7 +26,7 @@ Ingresso* coletardados(int n) {
 
 void altera_preco(Ingresso *i, int n) {
     int escolha_ingresso;
-    printf("\nDigite o número do ingresso que deseja alterar (de 1 a %d): ", n);
+    printf("\nDigite o número do ingresso que deseja alterar:");
     scanf("%d", &escolha_ingresso);
 
     if (escolha_ingresso >= 1 && escolha_ingresso <= n) {
