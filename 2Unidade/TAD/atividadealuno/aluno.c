@@ -25,7 +25,7 @@ Aluno* recebe_dados(void) {
         scanf("%d", &a->matricula);
         printf("Informe o IRA deste aluno:\n");
         scanf("%f", &a->ira);
-    } while (1); // Loop infinito, será interrompido quando 'S' ou 's' for digitado
+    } while (1); 
 
     return a;
 }
