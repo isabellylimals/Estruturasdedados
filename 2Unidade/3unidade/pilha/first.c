@@ -29,3 +29,9 @@ float pilha_pop(Pilha*p){
     p->n--;
     return v;
 }
+ void imprime(Pilha *p) {
+    int i;
+    for ( i = p->n - 1; i >= 0; i--) {
+        printf("%f\n", p->vet[i]);
+    }
+}

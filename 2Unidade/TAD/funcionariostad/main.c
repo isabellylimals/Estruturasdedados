@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "funcionarios.c"
 
 int main() {
@@ -21,10 +22,9 @@ int main() {
 
     copia_dados(entrada, num_funcionarios, pessoal);
     fclose(entrada);
-
-    float total_gasto_A = 0, total_gasto_B = 0, total_gasto_C = 0; int i;
-    for (i = 0; i < num_funcionarios; i++) {
-        
+int i;
+    float total_gasto_A = 0, total_gasto_B = 0, total_gasto_C = 0;
+    for ( i = 0; i < num_funcionarios; i++) {
         char depto = pessoal[i].departamento[0];
         if (depto == 'A') total_gasto_A += pessoal[i].salario;
         else if (depto == 'B') total_gasto_B += pessoal[i].salario;

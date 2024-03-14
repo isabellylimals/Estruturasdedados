@@ -1,7 +1,7 @@
 #ifndef FUNCIONARIOS_H
 #define FUNCIONARIOS_H
 
-//Definição do tipo Funcionario
+
 typedef struct {
     char nome[100];
     char departamento[2];
