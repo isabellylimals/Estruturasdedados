@@ -1,7 +1,11 @@
-typedef struct pilha Pilha;
-Pilha*pilha_cria(void);
-void pilha_push(Pilha*p, float v);
-float pilha_pop(Pilha*p);
-int pilha_vazia(Pilha*p);
-void pilha_libera(Pilha*p);
-float imprime(Pilha*p);
+#ifndef FIRST_H 
+#define FIRST_H
+
+
+
+void pilha_push(struct pilha *p, float v);
+int pilha_vazia(struct pilha *p);
+float pilha_pop(struct pilha *p);
+void imprime(struct pilha *p);
+
+#endif 
