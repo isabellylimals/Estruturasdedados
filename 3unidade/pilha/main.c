@@ -14,7 +14,7 @@ Pilha*pilha_cria(void){
 }
 pilha_push(&p, 50.5); 
     pilha_push(&p, 20.1); 
-    pilha_push(&p, 307.5; 
+    pilha_push(&p, 307.5); 
 
     
     imprime(&p); 
@@ -23,7 +23,3 @@ float valor_removido = pilha_pop(&p);
 
     return 0;
 }
-
-
-
-return p;
