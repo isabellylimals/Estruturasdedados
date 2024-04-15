@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include "first.h"
+#include "primeirapratica.h"
 
 #define N 50 
 
@@ -11,7 +11,7 @@ struct pilha {
 
 void pilha_push(pilha *p, float v) {
     if (p->n == N) {
-        printf("Capacidade máxima atingida\n");
+        printf("Capacidade maxima atingida\n");
         exit(1);
     }
     p->vet[p->n] = v;

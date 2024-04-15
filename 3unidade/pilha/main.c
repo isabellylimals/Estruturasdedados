@@ -1,5 +1,8 @@
 #include<stdio.h>
-#include "first.c"
+#include "primeirapratica.c"
+
+
+
 int main(){
  struct pilha p; 
  p->n=0;
