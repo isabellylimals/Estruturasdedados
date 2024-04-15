@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include "primeirapratica.c"
-
+//pratica feita na sala
 
 
 int main(){
