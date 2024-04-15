@@ -1,6 +1,6 @@
 /*
 funcoes foras pegas do meu projeto, implementei aqui para uma pequena demonstracao.
-Adicionei essas funcoes no projeto, para funcionar de acordo com uma fila de uma clinica mesmo, o primeiro paciente que entra, é o primeiro que sai, se tornando assim um paciente atendido, é isso que a funcao remover ór fila faz.
+Adicionei essas funcoes no projeto, para funcionar de acordo com uma fila de uma clinica mesmo, o primeiro paciente que entra, é o primeiro que sai, se tornando assim um paciente atendido, é isso que a funcao remover por fila faz.
 
 */
 #include"fila_lista.h"
