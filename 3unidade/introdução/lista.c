@@ -33,7 +33,7 @@ Lista* lst_busca(Lista *list, int valor) {
 
 Lista* lista_remove_primeiro(Lista *list) {
     if (list == NULL) {
-        return NULL; // Lista vazia, não há o que remover
+        return NULL; 
     }
 
     Lista *temp = list; // Salva o ponteiro para o primeiro nó

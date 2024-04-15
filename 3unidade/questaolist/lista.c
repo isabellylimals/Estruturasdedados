@@ -2,11 +2,7 @@
 parâmetros uma lista encadeada e um valor inteiro n, retire da lista todas as
 ocorrências de n e retorne a lista resultante. Essa função deve obedecer ao
 protótipo: Lista* retira_n(Lista* l, int n);
-OBS.: Os exercícios apresentados sugerem a implementação de diferentes
-funções. Sendo assim, o programador deve escrever um programa (função
-main) para testar sua implementação
 */
-
 #include "lista.h"
 #include <stdio.h>
 #include <stdlib.h>
