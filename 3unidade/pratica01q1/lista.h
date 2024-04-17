@@ -4,7 +4,6 @@
 
 typedef struct lista Lista;
 
-// Funções para manipulação da lista
 Lista* lista_cria(void);
 Lista* insere_elemento(Lista *list, int valor);
 Lista* lst_busca(Lista *list, int valor);

@@ -17,12 +17,12 @@ Lista* lista_cria(void) {
 Lista* insere_elemento(Lista *list, int valor) {
     Lista *novo_no = (Lista*)malloc(sizeof(Lista));
     if (novo_no == NULL) {
-        printf("Erro na alocação");
+        printf("Erro na alocacao");
         exit(1);
     }
     novo_no->info = valor;
     novo_no->prox_elemento = list;
-    return novo_no; // retorna o novo nó, que agora é o primeiro da lista
+    return novo_no; 
 }
 
 Lista* lst_busca(Lista *list, int valor) {
@@ -43,18 +43,18 @@ int maiores(Lista *list, int numero) {
         }
     }
 
-    printf("A quantidade de nós na lista que são maiores que o número informado é: %d\n", contador);
+    printf("A quantidade de nos na lista que sao maiores que o numero informado eh: %d\n", contador);
     return contador;
 }
 
 Lista* lista_remove_primeiro(Lista *list) {
     if (list == NULL) {
-        return NULL; // Lista vazia, não há o que remover
+        return NULL; 
     }
 
-    Lista *temp = list; // Salva o ponteiro para o primeiro nó
-    list = list->prox_elemento; // Atualiza o ponteiro da lista para o segundo nó
-    free(temp); // Libera a memória do primeiro nó
+    Lista *temp = list; 
+    list = list->prox_elemento; 
+    free(temp); 
 
-    return list; // Retorna a lista atualizada
+    return list; 
 }
