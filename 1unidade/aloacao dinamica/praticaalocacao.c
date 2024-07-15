@@ -22,8 +22,11 @@ int main() {
     }
 
     // Exibição da matriz.
-    for (i = 0; i < linhas; i++) {
+  for (i = 0; i < linhas; i++) {
         printf("Matriz [%d]: ", i);
         for (j = 0; j < colunas; j++) {
-            pri
-
+            printf("[%d] ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+    
